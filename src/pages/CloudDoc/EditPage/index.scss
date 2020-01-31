@@ -1,0 +1,32 @@
+.CodeMirror {
+  height       : calc(100% - 114px);
+  border-left  : none;
+  border-right : none;
+  border-radius: 0px;
+}
+
+.editor-toolbar {
+  border: none;
+}
+
+.editor-statusbar {
+  user-select  : none;
+  padding      : 3px;
+  padding-right: 10px;
+}
+
+.ant-tabs-card-content {
+  height: 100%;
+
+  .ant-tabs-tabpane {
+    height: 100%;
+  }
+}
+
+.sync-status {
+  font-size: 12px;
+  color    : #959694;
+  position : absolute;
+  bottom   : 5px;
+  left     : 10px;
+}

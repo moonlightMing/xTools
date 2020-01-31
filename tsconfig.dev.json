@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "module": "commonjs",
+    "watch": true,
+  },
+  "include": [
+    "mainRender"
+  ]
+}

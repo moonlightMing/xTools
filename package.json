@@ -1,0 +1,184 @@
+{
+  "name": "xtools",
+  "version": "0.1.0",
+  "author": {
+    "name": "moonlightMing",
+    "email": "605365071@qq.com"
+  },
+  "description": "Easy Ops Tools.",
+  "repository": "https://github.com/moonlightMing/xTools",
+  "main": "build/mainRender/main.js",
+  "dependencies": {
+    "@types/antd": "^1.0.0",
+    "@types/electron": "^1.6.10",
+    "@types/fs-extra": "^8.0.1",
+    "@types/jsdom": "^12.2.4",
+    "@types/lowdb": "^1.0.9",
+    "@types/marked": "^0.7.2",
+    "@types/node-schedule": "^1.2.4",
+    "@types/react-dnd": "^3.0.2",
+    "@types/react-dnd-html5-backend": "^3.0.2",
+    "@types/shortid": "^0.0.29",
+    "@types/uuid": "^3.4.6",
+    "@types/winreg": "^1.2.30",
+    "antd": "^3.25.0",
+    "autoprefixer": "7.1.6",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.7.0",
+    "babel-preset-react-app": "^3.1.1",
+    "bootstrap": "^4.3.1",
+    "case-sensitive-paths-webpack-plugin": "2.1.1",
+    "chalk": "1.1.3",
+    "cos-nodejs-sdk-v5": "^2.5.14",
+    "css-loader": "0.28.7",
+    "dotenv": "4.0.0",
+    "dotenv-expand": "4.2.0",
+    "electron-is-dev": "^1.1.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "0.11.2",
+    "font-awesome": "^4.7.0",
+    "fork-ts-checker-webpack-plugin": "^0.2.8",
+    "fs-extra": "3.0.1",
+    "html-webpack-plugin": "2.29.0",
+    "jest": "22.4.2",
+    "jsdom": "^15.2.1",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "lowdb": "^1.0.0",
+    "marked": "^0.7.0",
+    "mobx": "^5.14.2",
+    "mobx-react": "^6.1.4",
+    "node-schedule": "^1.3.2",
+    "object-assign": "4.1.1",
+    "postcss-flexbugs-fixes": "3.2.0",
+    "postcss-loader": "2.0.8",
+    "postcss-scss": "^1.0.3",
+    "precss": "^3.1.0",
+    "promise": "8.0.1",
+    "raf": "3.4.0",
+    "react": "^16.11.0",
+    "react-app-rewired": "^1.4.1",
+    "react-dev-utils": "^5.0.1",
+    "react-dnd": "^9.4.0",
+    "react-dnd-html5-backend": "^9.4.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
+    "react-simplemde-editor": "^4.1.0",
+    "resolve": "1.6.0",
+    "robotjs": "https://github.com/octalmage/robotjs.git\\#master",
+    "shortid": "^2.2.15",
+    "source-map-loader": "^0.2.1",
+    "style-loader": "0.19.0",
+    "sw-precache-webpack-plugin": "0.11.4",
+    "ts-import-plugin": "^1.4.3",
+    "ts-jest": "22.0.1",
+    "ts-loader": "^2.3.7",
+    "tsconfig-paths-webpack-plugin": "^2.0.0",
+    "tslint": "^5.7.0",
+    "tslint-config-prettier": "^1.10.0",
+    "tslint-react": "^3.2.0",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "url-loader": "0.6.2",
+    "uuid": "^3.3.3",
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.9.4",
+    "webpack-manifest-plugin": "1.3.2",
+    "whatwg-fetch": "2.0.3",
+    "winreg": "^1.2.4"
+  },
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "package-win": "electron-builder --win --x64",
+    "rebuild": "npm rebuild --runtime=electron --target=7.1.2 --disturl=https://atom.io/download/atom-shell --abi=64",
+    "test": "node scripts/test.js --env=jsdom",
+    "predev": "tsc --build tsconfig.dev.json",
+    "dev": "concurrently \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=none npm start\"",
+    "prepack": "npm run build",
+    "pack": "electron-builder --dir",
+    "predist": "npm run build && tsc --build tsconfig.prod.json",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/react-router-dom": "^5.1.0",
+    "concurrently": "^5.0.0",
+    "cross-env": "^6.0.3",
+    "devtron": "^1.4.0",
+    "electron": "^7.1.2",
+    "electron-builder": "^22.1.0",
+    "typescript": "^3.7.3",
+    "wait-on": "^3.3.0"
+  },
+  "homepage": "./",
+  "build": {
+    "appId": "com.moonlightming.xtools",
+    "productName": "xTools",
+    "copyright": "Copyright @2019 ${author}",
+    "extends": null,
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "zip"
+      ]
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.(j|t)s?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).(j|t)s?(x)"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "<rootDir>/config/jest/typescriptTransform.js",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|ts|tsx)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.ts",
+      "ts",
+      "web.tsx",
+      "tsx",
+      "web.js",
+      "js",
+      "web.jsx",
+      "jsx",
+      "json",
+      "node",
+      "mjs"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "D:\\myProjects\\xtools\\tsconfig.test.json"
+      }
+    }
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  }
+}

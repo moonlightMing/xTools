@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Auth</title>
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="vh-100 py-2 px-3 mx-auto rounded bg-white border container-box" style="width: 98%;">
+    <div class="header">
+      <div>
+        <span class="font-weight-bold">
+          xTools
+        </span>
+        <div class="float-right nodrag">
+          <i class="fa fa-minus mr-1" onclick="onMiniBtnClick()"></i>
+          <i class="fa fa-close" onclick="onCloseBtnClick()"></i>
+        </div>
+      </div>
+      <img class="d-block mx-auto my-5" height="96px" width="96x" src="../icon_128px.png">
+    </div>
+
+    <form class="mx-auto px-5 nodrag">
+      <div class="form-group input-group-sm">
+        <input id="pwd-input" type="password" class="form-control" oninput="onPwdInputChange()" placeholder="请输入密码" />
+        <small id="pwd-tips" class="form-text text-danger" style="visibility:hidden ">密码错误，请重新输入。</small>
+      </div>
+      <button id="enter-btn" type="submit" class="btn btn-outline-primary btn-sm form-btn">
+        确定
+      </button>
+      <button id="clear-btn" type="submit" class="btn btn-outline-secondary btn-sm form-btn" style="float:right">
+        清空
+      </button>
+    </form>
+  </div>
+</body>
+<script src="./index.js"></script>
+
+</html>

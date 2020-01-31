@@ -1,0 +1,77 @@
+.App {
+
+  min-height: 100%;
+  min-width : 100%;
+
+  .App-header {
+    background-color: #222;
+    height          : 150px;
+    padding         : 20px;
+
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+      height   : 80px;
+    }
+
+    h2 {
+      color: white;
+    }
+  }
+
+  .App-intro {
+    font-size: large;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.anticon {
+  vertical-align: middle !important;
+}
+
+.ant-btn-icon-only {
+  font-size: 14px !important;
+}
+
+::-webkit-scrollbar {
+  /* 槽宽度 */
+  position: absolute;
+  width   : 6px;
+  height  : 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* 拖动条 */
+  background-color: #B0ADC8;
+  border-radius   : 6px;
+}
+
+::-webkit-scrollbar-track {
+  /* 背景槽 */
+  background-color: #eee;
+  border-radius   : 6px;
+}
+
+svg {
+  vertical-align: unset;
+}
+
+.icon:hover {
+  color: gray;
+}
+
+.drag {
+  -webkit-app-region: drag;
+}
+
+.nodrag {
+  -webkit-app-region: no-drag;
+}
