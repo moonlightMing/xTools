@@ -14,7 +14,7 @@ const SiderLayout = (props: ISiderLayoutProps) => {
         {props.sider}
       </div>
       <div
-        className="col-xl-9 col-lg-9 col-md-8 col-sm-7 bg-dark p-0"
+        className="col-xl-9 col-lg-9 col-md-8 col-sm-7 bg-dark p-0 h-100"
       >
         {props.content}
       </div>
