@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface ISiderLayoutProps {
-  sider: React.SFC | React.ComponentClass | JSX.Element
-  content: React.SFC | React.ComponentClass | JSX.Element
+  sider: React.FC | React.ComponentClass | JSX.Element
+  content: React.FC | React.ComponentClass | JSX.Element
 }
 
 const SiderLayout = (props: ISiderLayoutProps) => {

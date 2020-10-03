@@ -5,11 +5,11 @@ import { PassbookStore } from 'src/store/PassbookStore';
 import { IData } from 'src/store/PassbookStore/type';
 import MsgCard from './MsgCard';
 
-interface IMsgListProps extends React.PropsWithChildren<React.SFC> {
+interface IMsgListProps extends React.PropsWithChildren<React.FC> {
   PassbookStore: PassbookStore
 }
 
-const MsgList: React.SFC = (props: IMsgListProps) => {
+const MsgList: React.FC = (props: IMsgListProps) => {
   // 如果没有内容返回空状态
   if (props.PassbookStore.selectedNodeDataValue.length === 0) {
     return <Empty className="align-self-center" />

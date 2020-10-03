@@ -7,12 +7,12 @@ import NodeFormModal from './NodeFormModal';
 
 const { ipcRenderer } = window.require('electron');
 
-interface IEditNodeFormModal extends React.Props<React.SFC> {
+interface IEditNodeFormModal extends React.Props<React.FC> {
   PassbookStore: PassbookStore
   SettingStore: SettingStore
 }
 
-const EditNodeFormModal: React.SFC = (props: IEditNodeFormModal) => {
+const EditNodeFormModal: React.FC = (props: IEditNodeFormModal) => {
 
   const onOk = (title: string, formValue: IFormPair[]) => {
     props.PassbookStore.toggleEditNodeFormVisibled()

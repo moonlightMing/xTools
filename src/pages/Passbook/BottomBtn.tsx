@@ -4,11 +4,11 @@ import React from 'react';
 import { PassbookStore } from 'src/store/PassbookStore';
 import { NodeType } from 'src/store/PassbookStore/type';
 
-interface IBottomBtnProps extends React.PropsWithChildren<React.SFC> {
+interface IBottomBtnProps extends React.PropsWithChildren<React.FC> {
   PassbookStore: PassbookStore
 }
 
-const BottomBtn: React.SFC = (props: IBottomBtnProps) => {
+const BottomBtn: React.FC = (props: IBottomBtnProps) => {
 
   // 如果当前节点为数据Node 则不可创建文件夹和文件
   const disabled = props.PassbookStore.selectedNodeTypeValue === NodeType.Node;

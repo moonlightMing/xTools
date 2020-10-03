@@ -5,11 +5,11 @@ import { PassbookStore } from 'src/store/PassbookStore';
 
 const { Search } = Input;
 
-interface ISearchInputProps extends React.PropsWithChildren<React.SFC> {
+interface ISearchInputProps extends React.PropsWithChildren<React.FC> {
   PassbookStore: PassbookStore
 }
 
-const SearchInput: React.SFC = (props: ISearchInputProps) => {
+const SearchInput: React.FC = (props: ISearchInputProps) => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     props.PassbookStore.search(e.target.value)
   }

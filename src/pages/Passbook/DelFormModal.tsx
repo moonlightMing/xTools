@@ -6,12 +6,12 @@ import { SettingStore } from 'src/store/SettingStore';
 
 const { ipcRenderer } = window.require('electron');
 
-interface IDelFormModalProps extends React.Props<React.SFC> {
+interface IDelFormModalProps extends React.Props<React.FC> {
   PassbookStore: PassbookStore
   SettingStore: SettingStore
 }
 
-const DelFormModal: React.SFC = (props: IDelFormModalProps) => {
+const DelFormModal: React.FC = (props: IDelFormModalProps) => {
 
   const onCancel = () => {
     props.PassbookStore.toggleDelFormVisibled()

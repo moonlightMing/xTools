@@ -8,7 +8,7 @@ import './index.scss';
 
 const { TreeNode, DirectoryTree } = Tree;
 
-interface ITreeDisplayProps extends React.PropsWithChildren<React.SFC> {
+interface ITreeDisplayProps extends React.PropsWithChildren<React.FC> {
   PassbookStore: PassbookStore,
 }
 
@@ -28,7 +28,7 @@ const inSearch = (title: string, searchKey: string) => {
   return <span>{title}</span>
 }
 
-const TreeDisplay: React.SFC = (props: ITreeDisplayProps) => {
+const TreeDisplay: React.FC = (props: ITreeDisplayProps) => {
 
   const searchKey = props.PassbookStore.searchKeyValue;
 

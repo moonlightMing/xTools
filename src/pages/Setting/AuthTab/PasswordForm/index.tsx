@@ -4,11 +4,11 @@ import { SettingStore } from 'src/store/SettingStore';
 import InitPasswordForm from './InitPasswordForm';
 import ResetPasswordForm from './ResetPasswordForm';
 
-interface IPasswordFormProps extends React.Props<React.SFC> {
+interface IPasswordFormProps extends React.Props<React.FC> {
   SettingStore: SettingStore
 }
 
-const PasswordForm: React.SFC = (props: IPasswordFormProps) => {
+const PasswordForm: React.FC = (props: IPasswordFormProps) => {
   if (!props.SettingStore.EnableAuthCheck) {
     return null
   }

@@ -7,11 +7,11 @@ import FormWrapper from '../FormWrapper';
 
 const { ipcRenderer } = window.require('electron');
 
-interface IAFKFormProps extends React.Props<React.SFC> {
+interface IAFKFormProps extends React.Props<React.FC> {
   SettingStore: SettingStore
 }
 
-const AFKForm: React.SFC = (props: IAFKFormProps) => {
+const AFKForm: React.FC = (props: IAFKFormProps) => {
 
   if (!props.SettingStore.EnableAuthCheck) {
     return null

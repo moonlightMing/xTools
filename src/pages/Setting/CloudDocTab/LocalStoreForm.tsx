@@ -6,11 +6,11 @@ import FormWrapper from '../FormWrapper';
 
 const { ipcRenderer } = window.require('electron');
 
-interface ILocalStoreFormProps extends React.Props<React.SFC> {
+interface ILocalStoreFormProps extends React.Props<React.FC> {
   SettingStore: SettingStore
 }
 
-const LocalStoreForm: React.SFC = (props: ILocalStoreFormProps) => {
+const LocalStoreForm: React.FC = (props: ILocalStoreFormProps) => {
 
   const onSecretIdInputBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     event.persist()

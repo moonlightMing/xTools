@@ -5,12 +5,12 @@ import { IFormPair } from 'src/store/PassbookStore/type';
 import { SettingStore } from 'src/store/SettingStore';
 import NodeFormModal from './NodeFormModal';
 
-interface IAddNodeFormModal extends React.Props<React.SFC> {
+interface IAddNodeFormModal extends React.Props<React.FC> {
   PassbookStore: PassbookStore
   SettingStore: SettingStore
 }
 
-const AddNodeFormModal: React.SFC = (props: IAddNodeFormModal) => {
+const AddNodeFormModal: React.FC = (props: IAddNodeFormModal) => {
   const onOk = (title: string, formValue: IFormPair[]) => {
     props.PassbookStore.toggleAddNodeFormVisibled()
     props.PassbookStore.addNode(title, formValue)

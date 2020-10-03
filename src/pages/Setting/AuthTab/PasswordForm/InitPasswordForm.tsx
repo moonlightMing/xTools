@@ -83,11 +83,11 @@ const InitPasswordForm = Form.create<IInitPasswordFormProps>({ name: 'InitPasswo
   }
 )
 
-interface IInitPasswordFormWrapperProps extends React.Props<React.SFC> {
+interface IInitPasswordFormWrapperProps extends React.Props<React.FC> {
   SettingStore: SettingStore
 }
 
-const InitPasswordFormWrapper: React.SFC = (props: IInitPasswordFormWrapperProps) => {
+const InitPasswordFormWrapper: React.FC = (props: IInitPasswordFormWrapperProps) => {
 
   const setInitPassword = (pwd: string) => {
     props.SettingStore.setCurAuthPassword(pwd)

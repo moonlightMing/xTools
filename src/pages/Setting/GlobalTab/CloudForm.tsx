@@ -9,11 +9,11 @@ import { SettingStore } from 'src/store/SettingStore';
 import { ObjectStoreType } from 'src/store/SettingStore/type';
 import FormWrapper from '../FormWrapper';
 
-interface ICloudFormProps extends React.Props<React.SFC> {
+interface ICloudFormProps extends React.Props<React.FC> {
   SettingStore: SettingStore
 }
 
-const CloudForm: React.SFC = (props: ICloudFormProps) => {
+const CloudForm: React.FC = (props: ICloudFormProps) => {
 
   const [checking, setChecking] = useState(false)
 

@@ -13,11 +13,11 @@ import MsgList from './MsgList';
 import SearchInput from './SearchInput';
 import TreeDisplay from './TreeDisplay';
 
-interface ISiderProps extends React.Props<React.SFC> {
+interface ISiderProps extends React.Props<React.FC> {
   PassbookStore: PassbookStore
 }
 
-const Sider: React.SFC = inject('PassbookStore')(observer(((props: ISiderProps) => (
+const Sider: React.FC = inject('PassbookStore')(observer(((props: ISiderProps) => (
   <div
     // tslint:disable-next-line: jsx-no-lambda
     onMouseEnter={() => props.PassbookStore.setDirTagVisible(true)}

@@ -6,7 +6,7 @@ import React from 'react';
 import { CloudDocStore } from 'src/store/CloudDocStore';
 import { IDocListDisplayType, IDocListSortDirection, IDocListSortType } from 'src/store/CloudDocStore/type';
 
-interface IListDisplayModalSwitchProps extends React.Props<React.SFC> {
+interface IListDisplayModalSwitchProps extends React.Props<React.FC> {
   CloudDocStore: CloudDocStore
 }
 
@@ -57,7 +57,7 @@ const sortMenuItem = (
     </Menu.Item>
   )
 
-const ListDisplayModalSwitch: React.SFC = (props: IListDisplayModalSwitchProps) => {
+const ListDisplayModalSwitch: React.FC = (props: IListDisplayModalSwitchProps) => {
 
   const onMenuItemClock = (param: ClickParam) => {
     // key的组成为 ${类别}.${枚举key值}

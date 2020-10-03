@@ -10,11 +10,11 @@ import TabTitle from './TabTitle';
 
 const { TabPane } = Tabs;
 
-interface IEditPageProps extends React.Props<React.SFC> {
+interface IEditPageProps extends React.Props<React.FC> {
   CloudDocStore: CloudDocStore
 }
 
-const EditPage: React.SFC = (props: IEditPageProps) => {
+const EditPage: React.FC = (props: IEditPageProps) => {
 
   useIpcRenderer({
     // 因为编辑器因BUG无法重载文本内容

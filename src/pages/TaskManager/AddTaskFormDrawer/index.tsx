@@ -156,12 +156,12 @@ const AddTaskForm = Form.create<IAddTaskFormProps>({ name: 'AddTaskForm' })(
   }
 )
 
-interface IAddTaskFormDrawerProps extends React.Props<React.SFC> {
+interface IAddTaskFormDrawerProps extends React.Props<React.FC> {
   TaskManagerStore: TaskManagerStore
   SettingStore: SettingStore
 }
 
-const AddTaskFormDrawer: React.SFC = (props: IAddTaskFormDrawerProps) => {
+const AddTaskFormDrawer: React.FC = (props: IAddTaskFormDrawerProps) => {
   const onDrawerClose = () => {
     props.TaskManagerStore.toggleAddTaskFormModalVisibled();
   }

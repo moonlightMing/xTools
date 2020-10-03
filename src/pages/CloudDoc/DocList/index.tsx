@@ -20,12 +20,12 @@ import uuidV1 from 'uuid/v1';
 
 const { ipcRenderer } = window.require('electron');
 
-interface IDocListProps extends React.Props<React.SFC> {
+interface IDocListProps extends React.Props<React.FC> {
   SettingStore: SettingStore
   CloudDocStore: CloudDocStore
 }
 
-const DocList: React.SFC = (props: IDocListProps) => {
+const DocList: React.FC = (props: IDocListProps) => {
   const renderItem =
     props.CloudDocStore.DocListDisplayModal === IDocListDisplayType.List
       ? ListDocItem

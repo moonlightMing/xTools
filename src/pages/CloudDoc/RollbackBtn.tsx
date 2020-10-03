@@ -4,11 +4,11 @@ import { inject, observer } from 'mobx-react';
 import React from 'react';
 import { CloudDocStore } from 'src/store/CloudDocStore';
 
-interface IRollbackBtn extends React.Props<React.SFC> {
+interface IRollbackBtn extends React.Props<React.FC> {
   CloudDocStore: CloudDocStore
 }
 
-const RollbackBtn: React.SFC = (props: IRollbackBtn) => {
+const RollbackBtn: React.FC = (props: IRollbackBtn) => {
 
   const onIconClick = () => {
     props.CloudDocStore.rollbackToLastFolder()

@@ -2,11 +2,11 @@ import { inject, observer } from 'mobx-react';
 import React from 'react';
 import { PassbookStore } from 'src/store/PassbookStore';
 
-interface IDirTagProps extends React.Props<React.SFC> {
+interface IDirTagProps extends React.Props<React.FC> {
   PassbookStore: PassbookStore
 }
 
-const DirTag: React.SFC = (props: IDirTagProps) => {
+const DirTag: React.FC = (props: IDirTagProps) => {
   return (
     <span
       className="py-1 px-2 position-absolute bg-light border-top border-right"

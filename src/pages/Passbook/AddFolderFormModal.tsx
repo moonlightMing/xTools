@@ -6,12 +6,12 @@ import { SettingStore } from 'src/store/SettingStore';
 
 const { ipcRenderer } = window.require('electron');
 
-interface IAddFolderFormModalProps extends React.PropsWithChildren<React.SFC> {
+interface IAddFolderFormModalProps extends React.PropsWithChildren<React.FC> {
   PassbookStore: PassbookStore
   SettingStore: SettingStore
 }
 
-const AddFolderFormModal: React.SFC = (props: IAddFolderFormModalProps) => {
+const AddFolderFormModal: React.FC = (props: IAddFolderFormModalProps) => {
 
   const [inputValue, setInputValue] = useState('')
 

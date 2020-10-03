@@ -5,11 +5,11 @@ import { TaskManagerStore } from 'src/store/TaskManagerStore';
 import { RunType } from 'src/store/TaskManagerStore/type';
 import { LoopTaskRunner, OnceTaskRunner } from 'src/util/TaskRunner';
 
-interface IDelTaskFormModalProps extends React.Props<React.SFC> {
+interface IDelTaskFormModalProps extends React.Props<React.FC> {
   TaskManagerStore: TaskManagerStore
 }
 
-const DelTaskFormModal: React.SFC = (props: IDelTaskFormModalProps) => {
+const DelTaskFormModal: React.FC = (props: IDelTaskFormModalProps) => {
 
   const onOk = () => {
     const currentDelTaskId = props.TaskManagerStore.CurrentDelTaskId;

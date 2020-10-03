@@ -8,12 +8,12 @@ import fileHelper from 'src/util/FileHelper';
 
 const { ipcRenderer } = window.require('electron');
 
-interface IDelModalProps extends React.Props<React.SFC> {
+interface IDelModalProps extends React.Props<React.FC> {
   CloudDocStore: CloudDocStore
   SettingStore: SettingStore
 }
 
-const DelModal: React.SFC = (props: IDelModalProps) => {
+const DelModal: React.FC = (props: IDelModalProps) => {
 
   const onOk = () => {
 

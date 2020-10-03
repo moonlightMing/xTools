@@ -7,11 +7,11 @@ import FormWrapper from '../FormWrapper';
 
 const { ipcRenderer } = window.require('electron');
 
-interface IBaseFormProps extends React.Props<React.SFC> {
+interface IBaseFormProps extends React.Props<React.FC> {
   SettingStore: SettingStore
 }
 
-const BaseForm: React.SFC = (props: IBaseFormProps) => {
+const BaseForm: React.FC = (props: IBaseFormProps) => {
 
   const onEnableAuthCheckboxChange = (e: CheckboxChangeEvent) => {
     props.SettingStore.setEnableAuthCheck(e.target.checked)

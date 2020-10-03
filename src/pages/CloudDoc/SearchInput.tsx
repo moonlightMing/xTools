@@ -5,11 +5,11 @@ import { CloudDocStore } from 'src/store/CloudDocStore';
 
 const { Search } = Input;
 
-interface ISearchInputProps extends React.Props<React.SFC> {
+interface ISearchInputProps extends React.Props<React.FC> {
   CloudDocStore: CloudDocStore
 }
 
-const SearchInput: React.SFC = (props: ISearchInputProps) => {
+const SearchInput: React.FC = (props: ISearchInputProps) => {
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.currentTarget.value === '') {

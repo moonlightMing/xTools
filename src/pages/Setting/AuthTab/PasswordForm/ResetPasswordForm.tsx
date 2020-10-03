@@ -103,11 +103,11 @@ const ResetPasswordForm = Form.create<IResetPasswordForm>({ name: 'ResetPassword
   }
 )
 
-interface IResetPasswordFormProps extends React.Props<React.SFC> {
+interface IResetPasswordFormProps extends React.Props<React.FC> {
   SettingStore: SettingStore
 }
 
-const ResetPasswordFormWrapper: React.SFC = (props: IResetPasswordFormProps) => {
+const ResetPasswordFormWrapper: React.FC = (props: IResetPasswordFormProps) => {
 
   const resetPassword = (pwd: string) => {
     props.SettingStore.setCurAuthPassword(pwd)

@@ -12,7 +12,7 @@ const { remote } = window.require('electron');
 
 const { Content, Sider } = Layout;
 
-interface IBasicLayoutProps extends React.PropsWithChildren<React.SFC> {
+interface IBasicLayoutProps extends React.PropsWithChildren<React.FC> {
   SettingStore: SettingStore,
 }
 
@@ -20,7 +20,7 @@ const disableMouseDrag = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>
   e.preventDefault()
 }
 
-const BasicLayout: React.SFC = (props: IBasicLayoutProps) => {
+const BasicLayout: React.FC = (props: IBasicLayoutProps) => {
 
   const firstRoute = Routes[0];
   const mainWindow = remote.getCurrentWindow()
